@@ -13,8 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PLATFORM_PATH := device/samsung/msm8930-common
-
 # inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
@@ -88,6 +86,9 @@ WIFI_DRIVER_FW_PATH_AP           := "ap"
 
 # Move wcnss_service to vendor
 PRODUCT_VENDOR_MOVE_ENABLED := true
+
+# DexPreopt debug info
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Include SE policies
 include device/qcom/sepolicy-legacy/sepolicy.mk
